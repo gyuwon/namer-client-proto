@@ -26,7 +26,7 @@
 
   </head>
   <body>
- 
+  
 <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
   <div class="container">
     <div class="navbar-header">
@@ -47,87 +47,49 @@
       <li><a href="#">네이머 소개</a></li>
       <li><a href="#">회원가입</a></li>
       <li><a href="#">로그인</a></li>
-      <li><a href="write.html" class="btn btn-default headerNamingButton">네이밍 의뢰하기</a></li>
+      <li><a href="#" class="btn btn-default headerNamingButton">네이밍 의뢰하기</a></li>
     </ul>
     </nav>
   </div>
 </header> 
+
+
   <!-- Page content of course! -->
 <main class="bs-masthead" id="content" role="main">
   <div class="container">
-    <h1>NAMER</h1>
-    <p class="lead">온라인 네이밍 서비스</p>
-    <p>
-      <a href="" class="btn btn-outline-inverse btn-lg">네이밍 의뢰하기</a>
-      <a href="" class="btn btn-outline-inverse btn-lg">네이밍 해주기</a></a>
-    </p>
+
+
+<div class="row">
+    <div class="">
+        
+        
+        
+        <form>
+            <div class="input-group">
+              <span class="input-group-addon">Tag</span>
+              <input type="text" class="form-control" placeholder="Username">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">Link</span>
+              <input type="text" class="form-control" placeholder="Username">
+            </div>
+            <div class="input-group">
+              <span class="input-group-addon">Content</span>
+              <textarea class="form-control"></textarea>
+            </div>
+            
+            
+            <button type="submit">의뢰하기</button>
+        </form>
+    </div>
+    
+</div>
+
   </div>
 </main>
 
 
 
-      
-<div class="row">
-  <div class="col-md-8">
-  
-  <nav>
-      <ul>
-          <li>
-              카테고리
-          </li>
-          
-      </ul>
-  </nav>
-    <div class="row" data-bind="foreach: contents">
-        <div class="col-sm-6 col-md-4">
-            <div class="thumbnail">
-                <img data-bind="attr: { src: content_link }" data-src="holder.js/300x200" alt="300x200" style="width: 300px; height: 200px;">
-                <div class="caption">
-                    <h3 data-bind="text: tag_name"></h3>
-                    <p>
-                        <span>상태: </span>
-                        <span data-bind="if: isEnrolled()">등록됨</span>
-                        <span data-bind="if: isConfirmed()">제목확정됨</span>
-                    </p>
-                    <p>
-                        <span>컨텐트 타입: </span>
-                        <span data-bind="if: isImage()">이미지</span>
-                        <span data-bind="if: isMovie()">동영상</span>
-                        <span data-bind="if: isSound()">소리</span>
-                    </p>
-                    <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
-                </div>
-            </div>
-        </div>
-
-
-  </div>
-<div class="row">
-      <ul class="pagination">
-        <li class="disabled"><a href="#">«</a></li>
-        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">2</a></li>
-        <li><a href="#">3</a></li>
-        <li><a href="#">4</a></li>
-        <li><a href="#">5</a></li>
-        <li><a href="#">»</a></li>
-     </ul>
-    </div>
-</div>
-
-
-
-  <div class="col-md-4">
-  
-        <ul class="nav nav-tabs">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Messages</a></li>
-        </ul>
-  </div>
-</div>
-      
-      
 
 
 
@@ -143,7 +105,6 @@
         $(function () {
             var service = new services.Mock();
             var viewModel = new viewModels.MainViewModel(ko, service);
-            window.viewModel = viewModel;
             ko.applyBindings(viewModel);
             viewModel.fetchContents();
         });

@@ -74,7 +74,7 @@ var services = {
                 contents.push(content);
                 content.id = contents.length;
                 callback();
-            })
+            });
         };
     },
     
