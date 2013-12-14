@@ -35,6 +35,21 @@ var viewModels = {
                 self.contents(contents);
             });
         };
+        
+        self.registerContent = function () {
+            var content = {
+                creator_id: 2,
+                tag_name: 'New Content',
+                content_type: 'IMAGE',
+                content_status: 'ENROLLED',
+                category_id: 1,
+                share_cnt: 0,
+                content_link: 'http://upload.wikimedia.org/wikipedia/en/thumb/e/e0/Iron_Man_bleeding_edge.jpg/250px-Iron_Man_bleeding_edge.jpg'
+            };
+            service.newContent(content, function () {
+                self.fetchContents();
+            });
+        };
     }
     
 };
