@@ -18,7 +18,7 @@ var services = {
                     {
                         id: 1,
                         creator_id: 1,
-                        tag_name: 'My Tag',
+                        tag_name: 'Hobbit',
                         content_type: 'IMAGE',
                         content_status: 'ENROLLED',
                         category_id: 1,
@@ -28,9 +28,9 @@ var services = {
                     {
                         id: 2,
                         creator_id: 1,
-                        tag_name: 'My Tag',
-                        content_type: 'IMAGE',
-                        content_status: 'ENROLLED',
+                        tag_name: 'Bilbo',
+                        content_type: 'MOVIE',
+                        content_status: 'CONFIRMED',
                         category_id: 1,
                         share_cnt: 10,
                         content_link: 'http://2.bp.blogspot.com/-z2_XigD9I0U/UNpe57TlDjI/AAAAAAAAAo0/OoVEkLJGUfI/s1600/The-Hobbit-1024x1024.jpg'
@@ -39,7 +39,7 @@ var services = {
                         id: 3,
                         creator_id: 1,
                         tag_name: 'My Tag',
-                        content_type: 'IMAGE',
+                        content_type: 'SOUND',
                         content_status: 'ENROLLED',
                         category_id: 1,
                         share_cnt: 10,
