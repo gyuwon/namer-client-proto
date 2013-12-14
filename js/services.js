@@ -69,7 +69,7 @@ var services = {
                 callback(contents);
             });
         };
-        self.newContent = function (content, callback) {
+        self.postContent = function (content, callback) {
             setTimeout(function () {
                 contents.push(content);
                 content.id = contents.length;
